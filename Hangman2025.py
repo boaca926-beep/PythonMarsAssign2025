@@ -69,7 +69,7 @@ def endGame():
     
     info = ""
     if loss:
-        info = f"You loss! Please try again."       
+        info = f"You loss! {current_word.upper()} is looked for. \nMaximum {max_count} attempts have been reached! \nPlease try again."       
         #print("You loss!")
     elif win:
         nb_attempt = max_count - count_left
