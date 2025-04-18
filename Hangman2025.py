@@ -104,7 +104,7 @@ def initialClick(): # initialize game and prepare for reset
     indx = 0
     for l in l_list:
         #print(f"{l}")
-        l_label = tk.Label(top_frame, text=" ", width=2, font=("Arial", 48), bg="Blue", fg="Gray")
+        l_label = tk.Label(top_frame, text=" ", width=2, font=("Arial", 48), bg="Blue", fg="White")
         l_label.grid(row=1, column=indx, padx=15, pady=15) 
         labels.append(l_label)
         indx = indx + 1
