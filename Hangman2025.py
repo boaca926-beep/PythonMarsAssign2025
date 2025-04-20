@@ -77,7 +77,7 @@ def endGame():
         #print("You win!")
 
     messagebox.showinfo("", info)
-    
+
     resetClick()
 
     
@@ -185,7 +185,7 @@ words = [
     "giraffe", "monkey", "zebra", "kangaroo", "panda",
     "horse", "cow", "pig", "sheep", "goat"
 ] 
-words = ["panda"]
+#words = ["panda"]
 
 # a list of labels store letters of the chose word
 labels = []
