@@ -33,7 +33,7 @@ def guessClick():
                     current_text = f"Letter '{l_guessed.upper()}' has been found!"
                     #print(f"guessed list: {guessed_letters}, stored_indx: {guessed_indx}, label_indx: {label_indx}")         
                     l_right += 1
-                    break
+                    #break
                 else:
                     current_text = f"Letter '{l_guessed.upper()}' doesn't exist in the word!"
                     #label_guess.config(text=f"Letter: {l_guessed} has been found!  {count_left} attempt left!")
@@ -76,9 +76,11 @@ def endGame():
         info = f"You win! \nA '{current_word.upper()}' is found! \nNumber of attempts {nb_attempt}"  
         #print("You win!")
 
+    messagebox.showinfo("", info)
+    
     resetClick()
 
-    messagebox.showinfo("", info)
+    
 
     
 def initialClick(): # initialize game and prepare for reset
@@ -183,7 +185,7 @@ words = [
     "giraffe", "monkey", "zebra", "kangaroo", "panda",
     "horse", "cow", "pig", "sheep", "goat"
 ] 
-#words = ["kangaroo"]
+words = ["panda"]
 
 # a list of labels store letters of the chose word
 labels = []
