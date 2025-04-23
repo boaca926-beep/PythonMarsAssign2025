@@ -7,8 +7,8 @@ import random
 from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
-
-
+import pymongo
+import os
 
 ## functions
 def guessClick():
@@ -119,7 +119,7 @@ def initialClick(): # initialize game and prepare for reset
     
     # create guess button
     label_guess.config(text=f"Let's guess! {count_left} attempt left!")
-    button_guess.config(text="Click to guess",state="active")
+    button_guess.config(text="Click to guess a letter!",state="active")
     button_guess.grid(row=0, column=0, padx=5, pady=15) 
     guess_entry.grid(row=0, column=1, padx=35, pady=15)
     label_guess.grid(row=1, columnspan=2, padx=15, pady=5)
@@ -185,16 +185,14 @@ button_play.pack(expand=True)
 
 ## Game attributes
 # a list of words contents animals
-'''
+
 words = [
     "dog", "cat", "elephant", "lion", "tiger",
     "bear", "wolf", "fox", "rabbit", "deer",
     "giraffe", "monkey", "zebra", "kangaroo", "panda",
     "horse", "cow", "pig", "sheep", "goat"
 ] 
-'''
 
-words = ["AnDi", "Bo", "Max", "Lemon"]
 
 # a list of labels store letters of the chose word
 labels = []
