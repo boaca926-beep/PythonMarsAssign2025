@@ -23,6 +23,10 @@ def guessClick():
         l_guessed=guess_entry.get()
         current_text = ""
         if l_guessed:
+            if l_guessed.lower() not in current_word:
+                #print("not in the word!")
+                current_text = f"Letter '{l_guessed.upper()}' doesn't exist in the word!"
+
             label_indx = 0
             for l in current_word:
                 if l_guessed.lower() == l.lower() and label_indx not in guessed_indx:
@@ -31,11 +35,13 @@ def guessClick():
                     guessed_indx.append(label_indx)
                     labels[label_indx].config(text=l.upper())
                     current_text = f"Letter '{l_guessed.upper()}' has been found!"
-                    #print(f"guessed list: {guessed_letters}, stored_indx: {guessed_indx}, label_indx: {label_indx}")         
+                    print(f"guessed list: {guessed_letters}, stored_indx: {guessed_indx}, label_indx: {label_indx}")         
                     l_right += 1
                     #break
-                else:
-                    current_text = f"Letter '{l_guessed.upper()}' doesn't exist in the word!"
+                
+                #if l_guessed.lower() != l.lower():
+                    #print("I have here anyway!!")
+                    #current_text = f"Letter '{l_guessed.upper()}' doesn't exist in the word!"
                     #label_guess.config(text=f"Letter: {l_guessed} has been found!  {count_left} attempt left!")
                 label_indx += 1
                 #print(f"l: {l}; l_guessed: {l_guessed}; {l_right} right guessed")
@@ -179,13 +185,16 @@ button_play.pack(expand=True)
 
 ## Game attributes
 # a list of words contents animals
+'''
 words = [
     "dog", "cat", "elephant", "lion", "tiger",
     "bear", "wolf", "fox", "rabbit", "deer",
     "giraffe", "monkey", "zebra", "kangaroo", "panda",
     "horse", "cow", "pig", "sheep", "goat"
 ] 
-#words = ["panda"]
+'''
+
+words = ["AnDi", "Bo", "Max", "Lemon"]
 
 # a list of labels store letters of the chose word
 labels = []
